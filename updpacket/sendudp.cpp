@@ -39,7 +39,7 @@ class udp:public infoHost{
 			close(send);
 		}
 		void sendout(){	
-			if((sendto(send,maxudp,strlen(maxudp),0,(struct sockaddr *)&sin , sizeof(addrlen))<0)){}
+			if((sendto(send,maxudp,strlen(maxudp),0,(struct sockaddr *)&sin , sizeof(sin))<0)){}
 			//	perror("failed to send udp packet");
 		}
 
